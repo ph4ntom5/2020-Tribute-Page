@@ -1,6 +1,8 @@
 body {
+
     margin:0;
     padding:0;
+
 }
 .Hero {
 
@@ -10,7 +12,6 @@ body {
     height:700px;
     width:100%;
     overflow: hidden;
-    margin:0;
     padding:0;
     
 
@@ -22,7 +23,7 @@ body {
     font-family:'Archivo Black', 'serif';
     color: #DDD7E0;
     margin:0;
-    font-size:20em;
+    font-size:16em;
     line-height: 0.9em;
     
     
@@ -38,48 +39,162 @@ body {
     float:left;
     position:absolute;
     background-color:red;
-    width:20%;
-    height:400px;
+    width:30%;
+    height:500px;
     
 }
 
 .column-right{
     
-    display: grid;
     margin:100px 50px 0px 0px;
+    display:grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap:1.4rem;
+    grid-row-gap:1.4rem;
     float:right;
     background-color:blue;
-    width:70%;
-    height:400px;
+    width:60%;
+    height:500px;
+    
    
 }
 
-@media all and (max-width:800px) 
+.a {
+
+grid-column: 1 / span 6;
+grid-row:1;
+background-color:yellow;
+
+}
+
+.b {
+
+    grid-column: 7 / span 9;
+    grid-row:1;
+    background-color:yellow;
+    
+    }
+
+.c {
+
+        grid-column: 1 / span 2;
+        grid-row:2;
+        background-color:yellow;
+        
+    }
+    
+
+.d {
+
+        grid-column: 3 / span 2;
+        grid-row:2;
+        background-color:yellow;
+        
+        }
+
+.e {
+
+        grid-column: 5 / span 5;
+        grid-row:2;
+        background-color:yellow;
+            
+        }
+
+.f {
+
+        grid-column: 10 / span 6;
+        grid-row:2;
+        background-color:yellow;
+                
+         }
+    
+
+
+/** Mobile layout start **/
+
+
+@media all and (max-width:805px) 
 {
+
+
+    .Hero {
+
+        display: flex;
+        flex-direction: column;
+
+    }
+
+
+
     .column-left
 
     {
         display: block; 
         float: none; 
+        padding-top:50px;
         width: 100%;
+        height:100%;
         margin:0;
-        z-index: 1;
-        
+        position: relative;
 
     }
+
 
      .column-right {
 
         display: block; 
         float: none; 
         width: 100%;
-        height:500px;
         margin:0;
-        z-index: 200;
-        
-        
+        position:relative;
+       
+
+    }
+
+    .Hero {
+
+        margin:0;
+        height:100%;
 
     }
 
 
+
+    .Hero p {
+
+        position:relative;
+        justify-content: center;
+        text-align: center;
+        
+    }
+
+
 }
+
+/** Mobile layout end **/
+
+/** Tablet layout start **/
+@media all and (max-width:1380px) 
+{
+
+
+    
+
+
+
+    .Hero p {
+
+        font-size:14em;
+        position:relative;
+        justify-content: center;
+        text-align: center;
+        
+    }
+
+
+}
+
+/** Tablet layout end **/
+
+
