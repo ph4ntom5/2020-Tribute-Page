@@ -19,7 +19,7 @@ body {
 
 .Hero p {
 
-    position: absolute;
+    
     font-family:'Archivo Black', 'serif';
     color: #DDD7E0;
     margin:0px;
@@ -227,5 +227,18 @@ grid-row:1;
 }
 
 /** Tablet layout end **/
+
+@media all and (min-width:1500px) {
+
+.column-left {
+
+display:grid;
+place-content: center;
+
+}
+
+
+
+}
 
 
