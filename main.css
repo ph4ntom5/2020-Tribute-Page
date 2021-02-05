@@ -32,7 +32,7 @@ body {
 
 .Hero .small-paragraph {
 
-font-family:roboto;
+font-family:'roboto' , 'serif';
 position:relative;
 font-size:2.4em;
 font-weight:100;
